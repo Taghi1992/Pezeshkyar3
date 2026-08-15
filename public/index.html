@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پزشک‌یار</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div>
+      <h1>پزشک‌یار</h1>
+      <p>سامانه مدیریت مطب و پرونده بیماران</p>
+    </div>
+    <span class="badge">نسخه آزمایشی</span>
+  </header>
+
+  <main class="container">
+
+    <section class="welcome">
+      <h2>داشبورد پزشک‌یار</h2>
+      <p>مدیریت ساده بیماران، ویزیت‌ها و نسخه‌ها</p>
+    </section>
+
+    <section class="cards">
+
+      <button class="card" onclick="showSection('patients')">
+        <span class="icon">👤</span>
+        <strong>بیماران</strong>
+        <small>مدیریت پرونده بیماران</small>
+      </button>
+
+      <button class="card" onclick="showSection('visits')">
+        <span class="icon">🩺</span>
+        <strong>ویزیت‌ها</strong>
+        <small>ثبت و مشاهده ویزیت‌ها</small>
+      </button>
+
+      <button class="card" onclick="showSection('prescriptions')">
+        <span class="icon">💊</span>
+        <strong>نسخه‌ها</strong>
+        <small>مدیریت نسخه و دارو</small>
+      </button>
+
+      <button class="card" onclick="showSection('reports')">
+        <span class="icon">📊</span>
+        <strong>گزارش‌ها</strong>
+        <small>گزارش‌های پایه سامانه</small>
+      </button>
+
+    </section>
+
+    <section id="patients" class="panel hidden">
+      <h2>پرونده بیماران</h2>
+
+      <form onsubmit="addPatient(event)">
+        <input id="patientName" type="text" placeholder="نام و نام خانوادگی" required>
+        <input id="patientPhone" type="tel" placeholder="شماره تماس">
+        <button type="submit">ثبت بیمار</button>
+      </form>
+
+      <div id="patientsList" class="list"></div>
+    </section>
+
+    <section id="visits" class="panel hidden">
+      <h2>ویزیت‌ها</h2>
+      <p>بخش ثبت شرح حال، تشخیص و برنامه درمان در این قسمت قرار می‌گیرد.</p>
+    </section>
+
+    <section id="prescriptions" class="panel hidden">
+      <h2>نسخه‌ها</h2>
+      <p>بخش نسخه و دارو در این قسمت قرار می‌گیرد.</p>
+    </section>
+
+    <section id="reports" class="panel hidden">
+      <h2>گزارش‌ها</h2>
+      <div id="healthStatus">در حال بررسی وضعیت سامانه...</div>
+    </section>
+
+    <section class="no-payment">
+      <strong>🔒 بدون پرداخت بانکی</strong>
+      <p>
+        این نسخه هیچ درگاه پرداخت، تراکنش بانکی، کیف پول یا اتصال به بانک ندارد.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    پزشک‌یار — نسخه آزمایشی تحت وب
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
