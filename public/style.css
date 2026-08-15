@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Tahoma, Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.topbar {
+  background: #1769aa;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h1 {
+  margin: 0 0 6px;
+}
+
+.topbar p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.badge {
+  background: white;
+  color: #1769aa;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.container {
+  width: min(1100px, 94%);
+  margin: 25px auto;
+}
+
+.welcome,
+.panel,
+.no-payment {
+  background: white;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.06);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  border: 0;
+  background: white;
+  border-radius: 14px;
+  padding: 25px 15px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0,0,0,.06);
+  text-align: center;
+  font-family: inherit;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.icon {
+  display: block;
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.card strong,
+.card small {
+  display: block;
+}
+
+.card small {
+  margin-top: 8px;
+  color: #6b7280;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+button[type="submit"] {
+  background: #1769aa;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.patient {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.no-payment {
+  border-right: 5px solid #2e7d32;
+}
+
+.no-payment strong {
+  color: #2e7d32;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #6b7280;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 430px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
